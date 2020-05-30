@@ -1,2 +1,2 @@
 # k3s-gitops-arm
-based on 0nedrop's repo of the same name
+based on onedr0p's repo of the same name
