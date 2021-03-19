@@ -16,7 +16,7 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-      existingConfigMap: metallb-config
+      existingConfigMap: system/metallb-config
 
 ---
 apiVersion: v1
