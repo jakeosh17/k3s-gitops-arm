@@ -33,6 +33,8 @@ spec:
       # - "--certificatesresolvers.le.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
 
     service:
+      type: LoadBalancer
+      loadBalancerIP: 192.168.1.26
       spec:
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
    # env:
