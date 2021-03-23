@@ -15,13 +15,14 @@ spec:
         name: traefik
         namespace: flux-system
       interval: 1m
+      timeout: 1000
   values:
     additionalArguments:
       - "--log.level=DEBUG"
-      - "--accesslog=false"
-      - "--api.dashboard=true"
-      - "--api.insecure=true"
-      - "--serversTransport.insecureSkipVerify=true"  # for k8s dash
+      # - "--accesslog=false"
+      # - "--api.dashboard=true"
+      # - "--api.insecure=true"
+      # - "--serversTransport.insecureSkipVerify=true"  # for k8s dash
       # - "--entryPoints.web.forwardedHeaders.insecure"
       # - "--certificatesResolvers.le.acme.dnsChallenge=true"
       # - "--certificatesResolvers.le.acme.dnsChallenge.provider=cloudflare"
