@@ -34,9 +34,9 @@ spec:
 
     service:
       type: LoadBalancer
-      loadBalancerIP: 192.168.1.26
-      spec:
-        externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
+      loadBalancerIP: 192.168.2.240
+      # spec:
+      #   externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
    # env:
     #  - name: CF_API_EMAIL
      #   value: mow4cash@gmail.com
