@@ -15,7 +15,24 @@ spec:
         name: bitnami
         namespace: flux-system
       interval: 1m
+  test:
+    enable: false # helm tests
+  install:
+    remediation: # perform remediation when helm upgrade fails
+      retries: 3
+  upgrade:
+    remediation: # perform remediation when upgrade fails
+      retries: 3
+      cleanupOnFail: true
   values:
+    controller:
+      image:
+        repository: metallb/controller
+        tag: v0.9.6
+    speaker:
+      image:
+        repository: metallb/speaker
+        tag: v0.9.6
     configInline:
       address-pools:
         - name: default
