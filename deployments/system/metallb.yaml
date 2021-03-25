@@ -6,27 +6,36 @@ metadata:
   namespace: system
 spec:
   interval: 5m
+  releaseName: metallb
   chart:
     spec:
       chart: metallb
-      version: 0.9.6
+      version: 2.3.3
       sourceRef:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
       interval: 1m
-  test:
-    enable: false # helm tests
-  install:
-    remediation: # perform remediation when helm upgrade fails
-      retries: 3
-  upgrade:
-    remediation: # perform remediation when upgrade fails
-      retries: 3
-      cleanupOnFail: true
+  # install:
+  #   remediation: # perform remediation when helm upgrade fails
+  #     retries: 3
+  # upgrade:
+  #   remediation: # perform remediation when upgrade fails
+  #     retries: 3
+  #     cleanupOnFail: true
   values:
     configInline:
       address-pools:
         - name: default
           protocol: layer2
           addresses: 192.168.2.240-192.168.2.256
+    controller:
+      image:
+        registry: docker.io
+        repository: metallb/controller
+        tag: v0.9.6
+    speaker:
+      image:
+        registry: docker.io
+        repository: metallb/speaker
+        tag: v0.9.6
