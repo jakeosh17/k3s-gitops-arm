@@ -1,0 +1,34 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: traefik
+      version: 9.18.0
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+        namespace: flux-system
+      interval: 1m
+      timeout: 1000
+  values:
+    additionalArguments:
+      # - "--api.dashboard=true"
+      # - "--api.insecure=true"
+      # - "--serversTransport.insecureSkipVerify=true"  # for k8s dash
+      # - "--entryPoints.web.forwardedHeaders.insecure"
+
+    service:
+      type: LoadBalancer
+      spec:
+        loadBalancerIP: 192.168.2.240
+        externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
+    logs:
+      level: DEBUG
+      access:
+        enabled: false
