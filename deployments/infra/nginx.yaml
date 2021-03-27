@@ -16,6 +16,8 @@ spec:
         name: ingress-nginx
         namespace: flux-system
       interval: 5m
+      install:
+        timeout: 100
   values:
     # controller:
     #   replicaCount: 2
