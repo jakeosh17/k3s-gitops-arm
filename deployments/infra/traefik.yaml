@@ -17,8 +17,8 @@ spec:
       interval: 1m
   values:
     additionalArguments:
-      # - "--api.dashboard=true"
-      # - "--api.insecure=true"
+       - "--api.dashboard=true"
+       - "--api.insecure=true"
       # - "--serversTransport.insecureSkipVerify=true"  # for k8s dash
       # - "--entryPoints.web.forwardedHeaders.insecure"
 
@@ -29,6 +29,7 @@ spec:
       spec:
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
     logs:
-      level: ERROR
+      general:
+        level: ERROR
       access:
-        enabled: false
+        enabled: true
