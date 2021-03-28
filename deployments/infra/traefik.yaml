@@ -24,8 +24,9 @@ spec:
 
     service:
       type: LoadBalancer
+      loadBalancerSourceRanges:
+        - 192.168.2.240/28
       spec:
-        loadBalancerIP: "192.168.2.240"
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
     logs:
       level: DEBUG
