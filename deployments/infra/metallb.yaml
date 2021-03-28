@@ -26,9 +26,10 @@ spec:
   values:
     configInline:
       address-pools:
-        - name: default
-          protocol: layer2
-          addresses: 192.168.2.240-192.168.2.256
+      - name: default
+        protocol: layer2
+        addresses:
+        - 192.168.2.240-192.168.2.256
     controller:
       image:
         registry: docker.io
