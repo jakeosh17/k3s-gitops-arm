@@ -20,35 +20,4 @@ spec:
       service:
         type: LoadBalancer
         loadBalancerIP: 192.168.2.240
-        # loadBalancerSourceRanges:
-        # - 192.168.2.240/28
         externalTrafficPolicy: Local
-      # metrics:
-      #   enabled: true
-      #   serviceMonitor:
-      #     enabled: true
-      #     namespace: kube-system
-      #   prometheusRule:
-      #     enabled: false
-      # tolerations:
-      # - key: "arm"
-      #   operator: "Exists"
-      # extraArgs:
-      #   default-ssl-certificate: "cert-manager/acme-crt-secret"
-      # resources:
-      #   requests:
-      #     memory: 500Mi
-      #     cpu: 25m
-      #   limits:
-      #     memory: 600Mi
-    # defaultBackend:
-    #   enabled: true
-    #   image:
-    #     repository: billimek/custom-error-pages
-    #     tag: 0.4.4
-      # resources:
-      #   requests:
-      #     memory: 250Mi
-      #     cpu: 25m
-      #   limits:
-      #     memory: 350Mi
