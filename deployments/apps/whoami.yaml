@@ -18,5 +18,6 @@ spec:
   values:
     ingress:
       enabled: true
+      path: /whoami
       hosts:
-        - whoami.kube.com
+        - *
