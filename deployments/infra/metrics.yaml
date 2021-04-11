@@ -16,9 +16,9 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    # image:
-    #   registry: docker.io
-    #   repository: rancher/metrics-server
-    #   tag: v0.4.1
+    image:
+      registry: docker.io
+      repository: rancher/metrics-server
+      tag: v0.4.1
     apiService:
       create: true
