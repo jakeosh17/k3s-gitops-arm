@@ -22,3 +22,5 @@ spec:
       tag: v0.3.6
     apiService:
       create: true
+    containerSecurityContext:
+      runAsNonRoot: false
