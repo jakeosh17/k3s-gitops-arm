@@ -29,6 +29,11 @@ spec:
         enabled: true
         hosts:
           - grafana.kube.com
+      dashboards:
+        default:
+          speedtest:
+            url: https://raw.githubusercontent.com/billimek/prometheus-speedtest-exporter/master/speedtest-exporter.json
+            datasource: Prometheus
     kubeEtcd:
       enabled: false
     kubeProxy:
