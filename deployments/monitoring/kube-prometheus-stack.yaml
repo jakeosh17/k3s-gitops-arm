@@ -11,7 +11,7 @@ spec:
       # CRDs are applied in core/crd/kube-prometheus-stack.yaml
       # renovate: registryUrl=https://prometheus-community.github.io/helm-charts
       chart: kube-prometheus-stack
-      version: 14.5.0
+      version: 14.6.2
       sourceRef:
         kind: HelmRepository
         name: prometheus-community-charts
@@ -52,8 +52,8 @@ spec:
       #       repository: jettech/kube-webhook-certgen
       #       tag: v1.5.2
     # https://github.com/prometheus-community/helm-charts/issues/204
-    kube-state-metrics:
-      fullnameOverride: kube-state-metrics
-      image:
-        repository: raspbernetes/kube-state-metrics
-        tag: v1.9.7
+    # kube-state-metrics:
+    #   fullnameOverride: kube-state-metrics
+    #   image:
+    #     repository: raspbernetes/kube-state-metrics
+    #     tag: v1.9.7
