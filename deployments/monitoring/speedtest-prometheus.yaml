@@ -17,3 +17,6 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
+    serviceMonitor:
+      enabled: true
+      interval: "20m"
