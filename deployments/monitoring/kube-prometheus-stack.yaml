@@ -40,18 +40,18 @@ spec:
         ingressClassName: nginx
         hosts:
           - prometheus.kube.com
-      additionalServiceMonitors:
-        - name: speedtest
-          selector:
-            matchLabels:
-              app.kubernetes.io/instance: speedtest
-          namespaceSelector:
-            matchNames:
-              - monitoring
-          endpoints:
-            - port: 9469
-              interval: "20m"
-              path: "/probe?script=speedtest"
+      # additionalServiceMonitors:
+      #   - name: speedtest
+      #     selector:
+      #       matchLabels:
+      #         app.kubernetes.io/instance: speedtest
+      #     namespaceSelector:
+      #       matchNames:
+      #         - monitoring
+      #     endpoints:
+      #       - port: 9469
+      #         interval: "20m"
+      #         path: "/probe?script=speedtest"
 
       # Setting this option to 0 to disable cpu limits
       # see https://github.com/prometheus-operator/prometheus-operator/blob/master/cmd/operator/main.go#L175
