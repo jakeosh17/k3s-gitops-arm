@@ -42,6 +42,9 @@ spec:
           - prometheus.kube.com
       additionalServiceMonitors:
         - name: speedtest
+          selector:
+            app.kubernetes.io/instance: speedtest
+            app.kubernetes.io/name: speedtest-prometheus
           namespaceSelector: monitoring
           endpoints:
             - port: 9469
