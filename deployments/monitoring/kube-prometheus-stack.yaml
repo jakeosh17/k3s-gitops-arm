@@ -43,8 +43,8 @@ spec:
       additionalServiceMonitors:
         - name: speedtest
           selector:
-            app.kubernetes.io/instance: speedtest
-            app.kubernetes.io/name: speedtest-prometheus
+            matchLabels:
+              app.kubernetes.io/instance: speedtest
           namespaceSelector: monitoring
           endpoints:
             - port: 9469
