@@ -40,6 +40,8 @@ spec:
         ingressClassName: nginx
         hosts:
           - prometheus.kube.com
+      prometheusSpec:
+        serviceMonitorSelectorNilUsesHelmValues: false
       # additionalServiceMonitors:
       #   - name: speedtest
       #     selector:
