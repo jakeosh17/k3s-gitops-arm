@@ -45,7 +45,9 @@ spec:
           selector:
             matchLabels:
               app.kubernetes.io/instance: speedtest
-          namespaceSelector: monitoring
+          namespaceSelector:
+            matchNames:
+              - monitoring
           endpoints:
             - port: 9469
               interval: "20m"
