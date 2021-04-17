@@ -34,14 +34,6 @@ spec:
           speedtest:
             url: https://raw.githubusercontent.com/billimek/prometheus-speedtest-exporter/master/speedtest-exporter.json
             datasource: Prometheus
-    kubeEtcd:
-      enabled: false
-    kubeProxy:
-      enabled: false
-    nodeExporter:
-      enabled: false
-    prometheusOperator:
-      enabled: true
     prometheus:
       ingress:
         enabled: true
