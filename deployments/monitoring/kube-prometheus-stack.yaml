@@ -25,15 +25,12 @@ spec:
         hosts:
           - alerts.kube.com
     grafana:
-      ingress:
-        enabled: true
-        hosts:
-          - grafana.kube.com
-      dashboards:
-        default:
-          speedtest:
-            url: https://raw.githubusercontent.com/billimek/prometheus-speedtest-exporter/master/speedtest-exporter.json
-            datasource: Prometheus
+      enabled: false
+      # dashboards:
+      #   default:
+      #     speedtest:
+      #       url: https://raw.githubusercontent.com/billimek/prometheus-speedtest-exporter/master/speedtest-exporter.json
+      #       datasource: Prometheus
     prometheus:
       ingress:
         enabled: true
@@ -42,6 +39,16 @@ spec:
           - prometheus.kube.com
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
+        podMonitorSelectorNilUsesHelmValues: false
+        enableAdminAPI: true
+        walCompression: true
+        storageSpec:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: local-path
+              resources:
+                requests:
+                  storage: 10Gi
       # additionalServiceMonitors:
       #   - name: speedtest
       #     selector:
