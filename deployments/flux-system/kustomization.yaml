@@ -11,3 +11,6 @@ resources:
 - helm-repos/naps.yaml
 - helm-repos/nginx.yaml
 - helm-repos/promethueus.yaml
+- helm-repos/grafana.yaml
+- helm-repos/influx-data.yaml
+- helm-repos/jetstack.yaml
