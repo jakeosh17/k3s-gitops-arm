@@ -17,9 +17,9 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    # persistence:
-    #   enabled: true
-    #   size: 10Gi
+    persistence:
+      enabled: true
+      size: 10Gi
     ingress:
       enabled: true
       annotations:
@@ -30,3 +30,9 @@ spec:
       existingSecret: grafana-admin
       userKey: user
       passwordKey: password
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://prometheus-stack-kube-prom-prometheus:9090
+        access: proxy
+        isDefault: true
