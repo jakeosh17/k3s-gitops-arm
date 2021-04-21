@@ -1,0 +1,39 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://grafana.github.io/helm-charts
+      chart: grafana
+      version: 6.7.4
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: flux-system
+      interval: 5m
+  values:
+    persistence:
+      enabled: true
+      storageClassName: local-path
+      size: 10Gi
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: "nginx"
+      hosts:
+      - grafana.kube.com
+    admin:
+      existingSecret: grafana-admin
+      userKey: user
+      passwordKey: password
+    # datasources:
+    #   - name: Prometheus
+    #     type: prometheus
+    #     url: http://prometheus-stack-kube-prom-prometheus:9090
+    #     access: direct
+    #     isDefault: true
