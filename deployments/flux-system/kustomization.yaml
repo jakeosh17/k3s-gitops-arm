@@ -14,3 +14,4 @@ resources:
 - helm-repos/grafana.yaml
 - helm-repos/influx-data.yaml
 - helm-repos/jetstack.yaml
+- helm-repos/codecentric.yaml
