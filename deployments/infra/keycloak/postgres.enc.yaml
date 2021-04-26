@@ -1,0 +1,42 @@
+apiVersion: v1
+stringData:
+    POSTGRESQL_POSTGRES_PASSWORD: ENC[AES256_GCM,data:o79peta4uYEeap8=,iv:eJsTN9XQeny9CK2xi+w/bZd2GGMbSODkVqST+j1O/zk=,tag:kFidYamysruQe4JqEO77gA==,type:str]
+    POSTGRESQL_USERNAME: ENC[AES256_GCM,data:kqco0WLkC+Y=,iv:pSyYKknJQ8KiXyjrWEKqf9HVRadiOuqHVe6PjFveyPQ=,tag:U2ON78JpjTN2G7gVUcvNag==,type:str]
+    POSTGRESQL_PASSWORD: ENC[AES256_GCM,data:ZFWNnYbQ9BVlQN4Xz0uUR3yL9ZYey/PdCgIpqtaE64rm,iv:cN8M+usaJ1/+gT8YzkpUFlEcgohyHa0t7V5X138Wl6g=,tag:uZM30jB4RmHcHtTZ4EBRbg==,type:str]
+    POSTGRESQL_DATABASE: ENC[AES256_GCM,data:IA+O+Fta8Ig=,iv:5UXlQggngkXpizqFsunI6xp2pFHGl3/C3Ji5XwulVf8=,tag:97d4pzBXp54h376hqXILfg==,type:str]
+kind: Secret
+metadata:
+    creationTimestamp: null
+    name: postgresql-secret
+    namespace: infra
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2021-04-26T00:51:20Z'
+    mac: ENC[AES256_GCM,data:t+qn5iz4Yb0krVFhowjLf9d9VQYeRDGxqxiuYlg0ouOGaN50jcYIO3OMR7peJ75skfBhRgFZ4pc87Em+zUOZg71+POQKELHSxDsnWHNln0XNtQU2HWNT7tvj0fOl4GwNCLuR416jUOpsiKeFsh083LWR2DktFJRSHUK56oXhUzM=,iv:/yrVspRkXiFthNgqmoiIp18zjTItjDHmV1R8PajemQs=,tag:WuGRi6WBJZZOuvPEjgp0ag==,type:str]
+    pgp:
+    -   created_at: '2021-04-26T00:51:20Z'
+        enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            wcFMA+z2glL1QrmoARAABHbFSNIgxf9t7KLsF1IHSaw/lY0So9lsUvQUl6Yj/BAY
+            IdKpzqm+Sy3KMoLTiNJH4hcYntk6SnMkH7fSLdcnJEVcgfBi1dOBmHb5FwnNenjR
+            9TNTxpKHbCpBTmFlh+7tHubAe3Wh2Wh6/qD+kTKrrFKiIE5FsNMjKFaj9oUzAsbv
+            fL5kz1r/VAJJpDjxohW/8DZUTg7W9qxg+bcg/99ge3SK50dUQ9L2NHZuYwxEYvKy
+            Y1onVcrweETsytozmF8ClHsOBSVBfOyh+xxFX1yqDdCyrquPlTb8iv31oriDijx3
+            aZ3xTxz/t9de0OV+wghD3qJxL1c3heu7RHC4R95+4llih1kBGeRGPnhLYl122CfB
+            1IEIcPqoLI5g8YX0UXzq3sXIwKfhAstBBEmZSynv28f2aapMqfMkQxgXx+QBrtf/
+            CbKShFMIwR21/u7DLOuyQ+f8RuI7iVPldyAu+HA7az9+HVXxhYMIwg7LW9pL7+np
+            ZriICQowbNRJb4VCgLnp+OoCiaWZZ2mgPYYIfA44iAStRvgI6IwVEHxXZ/R2OS1p
+            ZaAOQd8pCvVnwuYfOXDsVKNII5IaCLjjAu5kFWjc9LJQuDf/248i5MBNivF4vT8V
+            dnQIls6W0/swZzYDdT0vZNcYF1rkWI5GxY2nRt6fR+roziD7pI3/nH8VGL7NzlLS
+            4AHkufI0/D9PuUfqUD1FRaTjQ+EFfeA64BDh1i3gX+LgkSfx4AjlPIhSQFWTTKo2
+            ELE2nYO5NPKcy+QW3HLNIRAdn/8rtbDgK+SZ4uGMy6s6+eZE4STZ6RKR4lSe41zh
+            /5UA
+            =nHSH
+            -----END PGP MESSAGE-----
+        fp: 72BCE23F018BDBFF9958C184E072A5BE3FA451B0
+    encrypted_regex: ^(data|stringData)$
+    version: 3.6.1
