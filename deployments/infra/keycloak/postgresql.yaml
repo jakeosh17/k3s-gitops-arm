@@ -23,4 +23,4 @@ spec:
     persistence:
       enabled: true
       storageClassName: local-path
-    existingSecret: postgres-secret
+    existingSecret: postgresql-secret
