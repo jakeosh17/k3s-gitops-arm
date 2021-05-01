@@ -23,7 +23,7 @@ spec:
     # extraEnvFrom: |
     #   - secretRef:
     #       name: 'keycloak-env-values'
-    extraEnv:
+    extraEnv: |
       - name: DB_VENDOR
         value: postgres
       - name: DB_ADDR
