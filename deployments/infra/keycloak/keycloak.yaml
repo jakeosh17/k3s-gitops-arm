@@ -31,9 +31,9 @@ spec:
         - host: keycloak.kube.com
           paths:
             - /
-    postgresql:
+    # postgresql:
+    #   enabled: true
+    serviceMonitor:
       enabled: true
-    # serviceMonitor:
-    #   enabled: true
-    # prometheusRule:
-    #   enabled: true
+    prometheusRule:
+      enabled: true
