@@ -18,7 +18,7 @@ spec:
       interval: 1m
   values:
     image:
-      repository: docker.io/postgres
+      repository: postgres
       tag: "13"
     persistence:
       enabled: true
