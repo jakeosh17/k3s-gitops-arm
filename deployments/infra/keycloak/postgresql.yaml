@@ -19,7 +19,7 @@ spec:
   values:
     image:
       repository: docker.io/postgres
-      tag: "latest"
+      tag: "13"
     persistence:
       enabled: true
       storageClassName: local-path
