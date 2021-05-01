@@ -29,9 +29,9 @@ spec:
     #     value: "5432"
     #   - name: DB_DATABASE
     #     value: keycloak
-    # extraEnvFrom: |
-    #   - secretRef:
-    #       name: 'keycloak-env-values'
+    extraEnvFrom: |
+      - secretRef:
+          name: 'keycloak-secret'
     ingress:
       enabled: true
       annotations:
