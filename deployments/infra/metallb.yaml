@@ -5,12 +5,12 @@ metadata:
   name: metallb
   namespace: infra
 spec:
-  interval: 6m
+  interval: 5m
   releaseName: metallb
   chart:
     spec:
       chart: metallb
-      version: 2.3.4
+      version: 2.x.x
       sourceRef:
         kind: HelmRepository
         name: bitnami
