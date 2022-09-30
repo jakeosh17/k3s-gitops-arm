@@ -30,13 +30,15 @@ spec:
         protocol: layer2
         addresses:
         - 192.168.1.240/28
-    #controller:
-    #  image:
-    #    registry: docker.io
-    #    repository: metallb/controller
+    controller:
+      image:
+        registry: docker.io
+        repository: metallb/controller
+        tag: main
     #    tag: v0.9.6
-    #speaker:
-    #  image:
-    #    registry: docker.io
-    #    repository: metallb/speaker
+    speaker:
+      image:
+        registry: docker.io
+        repository: metallb/speaker
+        tag: main
     #    tag: v0.9.6
